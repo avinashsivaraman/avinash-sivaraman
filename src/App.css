@@ -18,11 +18,19 @@ html {
   top: 0;
   right: 0; */
   width: 12rem;
-  height: 3.5rem;
-  padding: 1rem;
+  padding: 1.5rem;
   color: #FCFFF5;
   align-self: center;
   border: 2px solid;
+}
+
+.header-hobby {
+  margin-top: .2rem;
+}
+
+.section-download-btn:hover {
+  background-color: #FCFFF5;
+  color: #154155;
 }
 
 a:hover {
@@ -43,6 +51,7 @@ a:hover {
 .header-content {
   display: flex;
   align-self: center;
+  place-content: center;
 }
 
 .header-contact{
@@ -141,6 +150,7 @@ a:hover {
   font-size: var(--font-greeting-size);
   font-weight: 300;
   line-height: 1.2;
+
 }
 
 .header-name {
@@ -149,6 +159,10 @@ a:hover {
 
 .header-status {
   font-size: var(--font-status-size)
+}
+
+.border-right  {
+  border-right: 2px solid;
 }
 
 @media only screen and (max-width: 600px) {
@@ -169,7 +183,7 @@ a:hover {
   }
   .section-download-btn {
     width: 5rem;
-    padding: .2rem;
+    padding: 1rem;
   }
   .mobile-hide {
     display: none;

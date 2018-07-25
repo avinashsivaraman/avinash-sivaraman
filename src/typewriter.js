@@ -1,3 +1,5 @@
+const emoji_type = ['‍💻','✏️','‍💻', '👌' ];
+
 export default class TxtType {
     constructor(el, toRotate, period) {
         this.toRotate = toRotate;
@@ -18,7 +20,7 @@ export default class TxtType {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
 
-        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+        this.el.innerHTML = `<span class="wrap"> ${this.txt} <span role="img" aria-label="emojis"> ${emoji_type[i]}</span></span>`;
 
         const that = this;
         let delta = 200 - Math.random() * 100;
@@ -28,14 +30,14 @@ export default class TxtType {
         }
 
         if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
+            delta = this.period;
+            this.isDeleting = true;
         } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum+=1;
-        delta = 500;
+            this.isDeleting = false;
+            this.loopNum+=1;
+            delta = 500;
         }
 
         setTimeout(() => that.tick(), delta);
-        };
+        }
 }
