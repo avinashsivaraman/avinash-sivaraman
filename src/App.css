@@ -138,6 +138,7 @@ a:hover {
 .header-img {
   width: var(--img-size);
   height: var(--img-size);
+  margin-right: 2rem;
 }
 .home-photo-img {
   height: 100%;
@@ -214,6 +215,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   place-content: center;
+  margin-left: 2rem;
 }
 
 #cursor {

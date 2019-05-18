@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import TxtType from './typewriter';
 import Banner from './Banner';
+import ParallexElement from './ParallexElement'
 import './App.css';
 
 class App extends Component {
+  state = {
+    color: ''
+  }
 
   componentDidMount() {
     const elements = document.getElementsByClassName('typewrite');
@@ -29,6 +33,7 @@ class App extends Component {
 
     const randomlySetStyle = cells => {
       const tempColor = color[randomIndex()]
+      this.setState({color: tempColor})
       heart.style.color = tempColor
       highlight.style.backgroundColor = tempColor
       cells.forEach(cell  => {
@@ -57,6 +62,7 @@ class App extends Component {
     return (
       <div className="App">
         <Banner />
+        <ParallexElement color={this.state.color}/>
         {/* <div className="section-white-banner border-bottom-blue" /> */}
         <section className = "section-header text-center">
           <div className="header-content">
