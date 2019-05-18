@@ -3,13 +3,10 @@ html {
   --heading-base-width: 20rem;
   --font-icon-size: 72px;
   --font-greeting-size: 5.5rem;
-  --font-name-size: 2rem;
-  --font-status-size: 1.25rem;
+  --font-name-size: 3rem;
+  --font-status-size: 1.5rem;
   --img-size: 15rem;
-}
-
-.section-white-banner {
-  height: 20vh;
+  --font-hobby-size: 1.5rem;
 }
 
 
@@ -19,18 +16,26 @@ html {
   right: 0; */
   width: 12rem;
   padding: 1.5rem;
+  font-size: .9rem;
   color: #FCFFF5;
+  background-color: #222831;
   align-self: center;
   border: 2px solid;
 }
 
 .header-hobby {
-  margin-top: .2rem;
+  padding: .5rem;
+  margin: .5rem;
+  font-size: var(--font-hobby-size);
+}
+
+.cursive {
+  font-family: 'Leckerli One', cursive;
 }
 
 .section-download-btn:hover {
   background-color: #FCFFF5;
-  color: #154155;
+  color: #222831;
 }
 
 a:hover {
@@ -41,30 +46,30 @@ a:hover {
 .section-header {
   height: 80vh;
   width: 100%;
-  background-color: #154155;
+  background-color: #222831;
   color: #FCFFF5;
   display: grid;
   place-content: center;
-  grid-template-rows: 20vh 40vh 20vh;
+  grid-template-rows: 60vh 1fr;
 }
 
 .header-content {
   display: flex;
   align-self: center;
-  place-content: center;
+  place-content: space-evenly;
 }
 
 .header-contact{
   color: #D1DBBD;
   /* position: absolute; */
 
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1; */
   grid-row: 3;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-content: center;
-  height: 10rem;
+  /* height: 10rem; */
 }
 
 .remove-default {
@@ -77,10 +82,8 @@ a:hover {
 }
 
 .highlight {
-  font-size: small;
   text-decoration: none;
   display: inline;
-  color: #801247;
   background-color: #ecd018;
   padding: 6px;
   border-radius: 4px;
@@ -135,13 +138,12 @@ a:hover {
 .header-img {
   width: var(--img-size);
   height: var(--img-size);
-  margin: 0 auto;
 }
 .home-photo-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transform: translateY(-115px) scale(1.1);
+  /* transform: translateY(-115px) scale(1.1); */
   border-radius: 16rem;
   border: 5px solid #D1DBBD;
 }
@@ -171,21 +173,97 @@ a:hover {
     --heading-base-width: 20rem;
     --font-icon-size: 48px;
     --font-greeting-size: 2.2rem;
-    --font-name-size: 1.25rem;
-    --font-status-size: 1rem;
-    --img-size: 10rem;
+    --font-name-size: 2rem;
+    --font-status-size: 1.5rem;
+    --font-hobby-size: 0.75rem;
+    --img-size: 13rem;
   }
-  .home-photo-img {
+  /* .home-photo-img {
      transform: translateY(-90px) scale(1.5);
-  }
+  } */
   .highlight {
     padding: .4rem;
   }
   .section-download-btn {
-    width: 5rem;
-    padding: 1rem;
+    width: 100%;
+    padding: 2rem;
+    border: none;
+    grid-column: 1 / -1;
   }
   .mobile-hide {
     display: none;
   }
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header {
+    margin-top: 2rem;
+  }
+
+  .section-header {
+    height: 75vh;
+  }
+  .header-contact {
+    grid-template-columns: repeat(3,1fr)
+  }
+}
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+
+#cursor {
+  position: fixed;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  z-index: 1000;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+  opacity: 0.7;
+}
+
+.cursor__label {
+  position: absolute;
+  color: black;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  z-index: 1;
+  display: block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: .14384615em;
+  text-transform: uppercase;
+}
+
+.cursor__bg {
+  -webkit-transition: transform .3s ease-in-out;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: block;
+  left: 0;
+  top: 0;
+  mix-blend-mode: exclusion;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  -webkit-transform: scale(.15);
+  transform: scale(.8);
+
 }
