@@ -43,24 +43,20 @@ class App extends Component {
     window.onclick = () => randomlySetStyle(cells)
 
     window.onmousewheel = () => randomlySetStyle(cells)
-    window.onmousemove = e => this.handleCursor(e)
+    // window.onmousemove = e => this.handleCursor(e)
   }
 
-  handleCursor = e  => {
-    console.log(e)
-    const cursor = document.querySelector('#cursor');
-    cursor.style.top = `${e.y}px`
-    cursor.style.left = `${e.x}px`
-  }
+  // handleCursor = e  => {
+  //   console.log(e)
+  //   const cursor = document.querySelector('#cursor');
+  //   cursor.style.top = `${e.y}px`
+  //   cursor.style.left = `${e.x}px`
+  // }
 
   render() {
     return (
       <div className="App">
         <Banner />
-        <div id="cursor">
-          <div class="cursor__label">Click</div>
-          <div class="cursor__bg"></div>
-        </div>
         {/* <div className="section-white-banner border-bottom-blue" /> */}
         <section className = "section-header text-center">
           <div className="header-content">
@@ -71,16 +67,16 @@ class App extends Component {
             <div className="header">
                 <div className="header-name">  I'm <span className="cursive">Avinash Sivaraman</span> </div>
                 <div className="header-status">I'm a Full Stack Developer</div>
-                <div className="header-hobby"> I  <i class="fas fa-heart" id="heart"></i> <div className="typewrite highlight" data-period="2000" data-type='[ "Creative Works ", "To Design  ", "To Develop ", "Working on Web Perf " ]' />
+                <div className="header-hobby"> I  <i className="fas fa-heart" id="heart"></i> <div className="typewrite highlight" data-period="2000" data-type='[ "Creative Works ", "To Design  ", "To Develop ", "Working on Web Perf " ]' />
                 </div>
             </div>
           </div>
           <div className="header-contact">
             <a className="remove-default header-contact-icon" href="https://www.linkedin.com/in/avinash-sivaraman/"><i className="home-icons fab fa-linkedin"></i></a>
-            <a className="remove-default header-contact-icon" href="https://twitter.com/AvinashSivaram"><i className="home-icons fab fa-twitter"></i></a>
+            <a className="remove-default header-contact-icon" href="https://twitter.com/AvinashSivaram"><i className="home-icons fab fa-twitter-square"></i></a>
             <a className="remove-default header-contact-icon" href="https://github.com/avinashsivaraman"><i className="home-icons fab fa-github-square"></i></a>
             <button className="section-download-btn remove-default" href='Resume.pdf' download='Avinash-Resume'>
-            <span className='mobile-hide'>Download</span>  Resume &nbsp;<i className="fas fa-download"></i></button>
+            <span className='mobile-hide'>Download</span>  Resume <i className="fas fa-download"></i></button>
           </div>
         </section>
       </div>
