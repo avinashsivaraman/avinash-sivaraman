@@ -1,0 +1,38 @@
+.Card {
+  height: 25rem;
+  width: 20rem;
+  border: 1px solid black;
+  display: grid;
+  text-align: left;
+  padding: 2px;
+  grid-template-rows: 15% 1fr 10%;
+  margin: 3px;
+  background-color: #222831;
+  color: #FCFFF5;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #221;
+}
+
+.Card__Header {
+  text-align: center;
+  font-size: large;
+  text-transform: uppercase;
+  /* border: 1px solid black; */
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.Card__Body {
+  padding: 5px;
+}
+
+.Card__Body li {
+  margin: 10px;
+  text-align: justify;
+}
+
+.Card__Footer {
+  padding: 2px;
+}

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { randomlySetStyle } from './constant'
 import TxtType from './typewriter';
 import Banner from './Banner';
+import Cards from './Cards';
 import './App.css';
 
 const App = () => {
@@ -48,6 +49,9 @@ const App = () => {
             <button className="section-download-btn remove-default" href='Resume.pdf' download='Avinash-Resume'>
             <span className='mobile-hide'>Download</span>  Resume <i className="fas fa-download"></i></button>
           </div>
+        </section>
+        <section className='section-project text'>
+          <Cards/>
         </section>
       </div>
     );
