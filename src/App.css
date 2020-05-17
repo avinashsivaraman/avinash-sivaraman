@@ -5,8 +5,12 @@ html {
   --font-greeting-size: 5.5rem;
   --font-name-size: 3rem;
   --font-status-size: 1.5rem;
-  --img-size: 15rem;
+  --img-size: 20rem;
   --font-hobby-size: 1.5rem;
+}
+
+.header {
+  user-select: none;
 }
 
 
@@ -49,7 +53,6 @@ a:hover {
   background-color: #222831;
   color: #FCFFF5;
   display: grid;
-  place-content: center;
   grid-template-rows: 60vh 1fr;
 }
 
@@ -161,10 +164,6 @@ a:hover {
 
 .header-status {
   font-size: var(--font-status-size)
-}
-
-.border-right  {
-  border-right: 2px solid;
 }
 
 @media only screen and (max-width: 600px) {

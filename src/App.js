@@ -33,7 +33,6 @@ const App = () => {
             <div className="header-img padding-right">
               <img alt="profile" className="home-photo-img" src="./profile.jpg" />
             </div>
-            <div className="border-right"></div>
             <div className="header">
                 <div className="header-name">  I'm <span className="cursive">Avinash Sivaraman</span> </div>
                 <div className="header-status">I'm a Full Stack Developer</div>

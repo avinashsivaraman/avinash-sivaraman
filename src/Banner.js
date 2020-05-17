@@ -1,44 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Banner.css'
 
 export default () => {
   return (
     <div className="container">
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
-      <div className="cell"></div>
+      {[...Array(35).keys()].map((e) => {
+        return <div key={e} className="cell"></div>
+      })}
     </div>
   )
 }
